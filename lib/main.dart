@@ -1,4 +1,5 @@
 import 'package:cstocks/screens/homepage.dart';
+import 'package:cstocks/screens/stock_details.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
@@ -16,7 +17,11 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const HomePage(),
+      initialRoute: 'homepage',
+      routes: {
+        'homepage': (context) => const HomePage(),
+        'stockdetails': (context) => const StockDetails()
+      },
     );
   }
 }
